@@ -4,25 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>予約入力画面</title>
+  <?php if(Auth::check()): ?>
+    <title>管理画面</title>
+  <?php else: ?>
+    <title>予約入力画面</title>
+  <?php endif; ?>
   <?php echo $__env->yieldContent('styles'); ?>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 <header>
   <nav class="my-navbar">
+  <?php if(Auth::check()): ?>
+    <a>管理画面</a>
+  <?php else: ?>
     <a class="my-navbar-brand" href="/">予約入力画面</a>
+  <?php endif; ?>
     <div class="my-navbar-control">
     <?php if(Auth::check()): ?>
-        <span class="my-navbar-item">ようこそ, <?php echo e(Auth::user()->name); ?>さん</span>
-        ｜
-        <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
+        <span class="my-navbar-item">ようこそ <?php echo e(Auth::user()->name); ?>さん</span>
+        <a href="/" id="showorder"> 予約入力画面へ</a>
+        <a href="/" id="logout" class="my-navbar-item">ログアウト</a>
         <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
           <?php echo csrf_field(); ?>
         </form>
       <?php else: ?>
         <a class="my-navbar-item" href="<?php echo e(route('login')); ?>">管理者の方はこちらから</a>
-      <?php endif; ?>
+    <?php endif; ?>
     </div>
   </nav>
 </header>

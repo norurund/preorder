@@ -12,8 +12,12 @@
 */
 
 Route::get('/', 'FolderController@ordersform')->name('order.create');
+Route::get('/{id}/thankyou', 'FolderController@thankyou')->name('order.thankyou');
 Route::post('/', 'FolderController@create');
 
-Route::get('/admin/ref', 'AdminController@showorders')->name('admin.ref');
-Route::get('/admin/ref/dl', 'AdminController@export')->name('admin.export');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/admin/ref', 'AdminController@showorders')->name('admin.ref');
+    Route::get('/admin/ref/dl', 'AdminController@export')->name('admin.export');
+});
+
 Auth::routes();

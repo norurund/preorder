@@ -5,7 +5,7 @@
         <nav class="panel panel-default">
           <div class="panel-heading">ステータス</div>
           <div class="panel-body">
-            <h1>予約総数：</h1>
+            <h2>予約総数：<?php echo e($num); ?> </h2>
           </div>
         </nav>
       </div>
@@ -26,7 +26,6 @@
               <th>日程</th>
               <th>会</th>
               <th>紹介者氏名</th>
-              <th></th>
             </tr>
             </thead>
             <tbody>

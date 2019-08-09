@@ -6,5 +6,4 @@
     dateFormat: "Y/m/d",
     minDate: new Date()
   });
-</script>
-<?php /**PATH C:\xampp\htdocs\preodr\resources\views/share/flatpickr/scripts.blade.php ENDPATH**/ ?>
+</script><?php /**PATH C:\xampp\htdocs\preodr\resources\views/share/flatpickr/scripts.blade.php ENDPATH**/ ?>

@@ -11,8 +11,10 @@ class AdminController extends Controller
     {
         // すべてのフォルダを取得する
         $order = Order::all();
+        $num = Order::count();
         return view('admin/ref', [
             'order' => $order,
+            'num' => $num,
         ]);
     }
 
@@ -30,9 +32,9 @@ class AdminController extends Controller
       $handle = fopen('php://output', 'w');
 
       $columns = [
-        'id',
-        'name',
-        'email',
+        '予約者氏名',
+        '日付',
+        '会',
       ] ;
       mb_convert_variables('SJIS-win', 'UTF-8', $columns);
 
@@ -41,9 +43,9 @@ class AdminController extends Controller
       $order = Order::all();
       foreach ($order as $odr) {
         $csv = [
-          $odr->id,
-          $odr->name,
-          $odr->email,
+          $odr->ordername,
+          $odr->date,
+          $odr->kai,
         ] ;
         mb_convert_variables('SJIS-win', 'UTF-8', $csv);
         fputcsv($handle, $csv);
