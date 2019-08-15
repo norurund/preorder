@@ -16,7 +16,7 @@
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               </div>
             <?php endif; ?>
-      <form action="<?php echo e(route('order.create')); ?>" method="POST">
+      <form action="<?php echo e(route('order.create', ['id' => $order->id])); ?>" method="POST">
               <?php echo csrf_field(); ?>
               <div class="form-group">
                 <label for="ordername">名前</label>
@@ -29,6 +29,7 @@
               <div class="form-group">
               <label for="kai">会</label>
               <select input type="select" class="form-control" name="kai" id="kai" >
+                  <option>-</option>
                   <option>マチネ</option>
                   <option>ソワレ</option>
                 </select>

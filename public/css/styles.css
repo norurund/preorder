@@ -196,6 +196,16 @@ a.my-navbar-item:hover {
 .micromodal-slide .modal__overlay {
   will-change: transform;
 }
+
 .thankyoutable{
   font-size: 20px;
+}
+
+.panel-default{
+}
+
+.messages{
+  color: tomato;
+  font-size: 20px;
+  text-align: center;
 }

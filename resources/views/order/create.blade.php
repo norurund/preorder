@@ -31,6 +31,7 @@
               <div class="form-group">
               <label for="kai">会</label>
               <select input type="select" class="form-control" name="kai" id="kai" >
+                  <option>-</option>
                   <option>マチネ</option>
                   <option>ソワレ</option>
                 </select>

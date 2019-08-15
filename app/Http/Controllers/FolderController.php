@@ -10,7 +10,8 @@ class FolderController extends Controller
 {
     public function ordersform()
     {
-        return view('order/create');
+        $order = new Order();
+        return view('order/create',['order' => $order]);
     }
 
     public function create(CreateOrder $request)
