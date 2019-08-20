@@ -20,8 +20,8 @@ class FolderController extends Controller
     $order = new Order();
     // タイトルに入力値を代入する
     $order->ordername = $request->ordername;
-    $order->date = $request->date;
     $order->kai = $request->kai;
+    $order->address = $request->address;
     $order->name = $request->name;
     // インスタンスの状態をデータベースに書き込む
     $order->save();

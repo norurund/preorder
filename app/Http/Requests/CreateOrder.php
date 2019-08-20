@@ -26,8 +26,8 @@ class CreateOrder extends FormRequest
     {
         return [
             'ordername' => 'required',
-            'date' => 'required',
             'kai' => 'required',
+            'address' => 'required',
             'name' => 'required',
         ];
     }

@@ -23,7 +23,7 @@
             <thead>
             <tr>
               <th>予約者氏名</th>
-              <th>日程</th>
+              <th>メールアドレス</th>
               <th>会</th>
               <th>紹介者氏名</th>
             </tr>
@@ -32,7 +32,7 @@
             <?php $__currentLoopData = $order; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $odr): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <tr>
                 <td><?php echo e($odr->ordername); ?></td>
-                <td><?php echo e($odr->date); ?></td>
+                <td><?php echo e($odr->address); ?></td>
                 <td><?php echo e($odr->kai); ?></td>
                 <td><?php echo e($odr->name); ?></td>
               </tr>

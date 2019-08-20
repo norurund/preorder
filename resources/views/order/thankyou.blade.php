@@ -2,27 +2,30 @@
 
 @section('content')
 
-<div class="meesages">
+<center>
+<div class="container-fluid">
+<div class="mx-auto" style="width: 800px;">
 <h3>Thankyou!!以下の内容で予約致しました。</h3>
-</div>
-
+<div class="col-6">
 <div class="panel panel-default">
 <table class="table thankyoutable">
 
         <thead>
             <tr>
-              <th>日程</th>
               <th>会</th>
               <th>紹介者氏名</th>
             </tr>
         </thead>
         <tr>
-          <td>{{ $order->date }}</td>
           <td>{{ $order->kai }}</td>
           <td>{{ $order->name }}</td>
         </tr>
 
 </table>
 </div>
+</div>
+</div>
+</div>
+</center>
 
 @endsection

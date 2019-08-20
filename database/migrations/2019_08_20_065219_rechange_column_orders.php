@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFoldersTable extends Migration
+class RechangeColumnOrders extends Migration
 {
     /**
      * Run the migrations.
@@ -30,6 +30,8 @@ class CreateFoldersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::table('order', function (Blueprint $table) {
+            //
+        });
     }
 }

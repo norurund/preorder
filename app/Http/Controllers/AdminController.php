@@ -33,8 +33,9 @@ class AdminController extends Controller
 
       $columns = [
         '予約者氏名',
-        '日付',
         '会',
+        'メールアドレス',
+        '紹介者氏名',
       ] ;
       mb_convert_variables('SJIS-win', 'UTF-8', $columns);
 
@@ -44,8 +45,9 @@ class AdminController extends Controller
       foreach ($order as $odr) {
         $csv = [
           $odr->ordername,
-          $odr->date,
           $odr->kai,
+          $odr->address,
+          $odr->name,
         ] ;
         mb_convert_variables('SJIS-win', 'UTF-8', $csv);
         fputcsv($handle, $csv);

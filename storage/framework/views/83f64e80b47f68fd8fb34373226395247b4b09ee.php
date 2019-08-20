@@ -23,16 +23,16 @@
                 <input type="text" class="form-control" name="ordername" id="ordername" />
               </div>
               <div class="form-group">
-                <label for="date">日付</label>
-                <input type="text" class="form-control" name="date" id="date" />
-              </div>
-              <div class="form-group">
               <label for="kai">会</label>
               <select input type="select" class="form-control" name="kai" id="kai" >
                   <option>-</option>
                   <option>マチネ</option>
                   <option>ソワレ</option>
                 </select>
+              </div>
+              <div class="form-group">
+                <label for="name">メールアドレス</label>
+                <input type="text" class="form-control" name="address" id="address" />
               </div>
               <div class="form-group">
                 <label for="name">紹介者氏名</label>

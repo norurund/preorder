@@ -25,7 +25,7 @@
             <thead>
             <tr>
               <th>予約者氏名</th>
-              <th>日程</th>
+              <th>メールアドレス</th>
               <th>会</th>
               <th>紹介者氏名</th>
             </tr>
@@ -34,7 +34,7 @@
             @foreach($order as $odr)
               <tr>
                 <td>{{ $odr->ordername }}</td>
-                <td>{{ $odr->date }}</td>
+                <td>{{ $odr->address }}</td>
                 <td>{{ $odr->kai }}</td>
                 <td>{{ $odr->name }}</td>
               </tr>
