@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFoldersTable extends Migration
+class ResetTablesOrders extends Migration
 {
     /**
      * Run the migrations.
@@ -15,10 +15,13 @@ class CreateFoldersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('ordername', 20);
-            $table->string('kai', 20);
-            $table->string('address', 40);
-            $table->string('name', 20);
+            $table->string('ordername');
+            $table->integer('kai');
+            $table->integer('tiketsum', 30)->nullable(false)->change();
+            $table->integer('tiketadl', 30)->nullable(false)->change();
+            $table->integer('tiketcld', 30)->nullable(false)->change();
+            $table->string('name');
+            $table->string('address');
             $table->timestamps();
         });
     }

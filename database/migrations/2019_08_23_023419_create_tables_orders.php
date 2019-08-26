@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RechangeColumnOrders extends Migration
+class CreateTablesOrders extends Migration
 {
     /**
      * Run the migrations.
@@ -15,10 +15,13 @@ class RechangeColumnOrders extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('ordername', 20);
-            $table->string('kai', 20);
-            $table->string('address', 40);
-            $table->string('name', 20);
+            $table->string('ordername');
+            $table->string('kai');
+            $table->integer('tiketsum');
+            $table->integer('tiketadl');
+            $table->integer('tiketcld');
+            $table->string('name');
+            $table->string('address');
             $table->timestamps();
         });
     }
@@ -30,8 +33,6 @@ class RechangeColumnOrders extends Migration
      */
     public function down()
     {
-        Schema::table('order', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('orders');
     }
 }

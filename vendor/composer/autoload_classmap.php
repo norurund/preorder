@@ -1796,7 +1796,7 @@ return array(
     'Opis\\Closure\\SecurityProvider' => $vendorDir . '/opis/closure/src/SecurityProvider.php',
     'Opis\\Closure\\SelfReference' => $vendorDir . '/opis/closure/src/SelfReference.php',
     'Opis\\Closure\\SerializableClosure' => $vendorDir . '/opis/closure/src/SerializableClosure.php',
-    'OrderTableSeeder' => $baseDir . '/database/seeds/OrderTableSeeder.php',
+    'OrdersTableSeeder' => $baseDir . '/database/seeds/OrdersTableSeeder.php',
     'PHPUnit\\Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert.php',
     'PHPUnit\\Framework\\AssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',

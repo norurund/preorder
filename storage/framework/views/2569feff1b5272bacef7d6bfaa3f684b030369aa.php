@@ -1,15 +1,15 @@
 <?php $__env->startSection('content'); ?>
   <div class="container">
     <div class="row">
-      <div class="col col-md-4">
+      <div class="col col-md-2">
         <nav class="panel panel-default">
           <div class="panel-heading">ステータス</div>
           <div class="panel-body">
-            <h2>予約総数：<?php echo e($num); ?> </h2>
+            <h4>予約総数：<?php echo e($num); ?> </h4>
           </div>
         </nav>
       </div>
-      <div class="column col-md-8">
+      <div class="column col-md-10">
         <div class="panel panel-default">
           <div class="panel-heading">予約一覧</div>
           <div class="panel-body">
@@ -25,6 +25,9 @@
               <th>予約者氏名</th>
               <th>メールアドレス</th>
               <th>会</th>
+              <th>総予約枚数</th>
+              <th>大人</th>
+              <th>子供</th>
               <th>紹介者氏名</th>
             </tr>
             </thead>
@@ -33,7 +36,10 @@
               <tr>
                 <td><?php echo e($odr->ordername); ?></td>
                 <td><?php echo e($odr->address); ?></td>
-                <td><?php echo e($odr->kai); ?></td>
+                <td><?php echo e(mb_substr($odr->kai, 0,3)); ?></td>
+                <td><?php echo e($odr->tiketsum); ?></td>
+                <td><?php echo e($odr->tiketadl); ?></td>
+                <td><?php echo e($odr->tiketcld); ?></td>
                 <td><?php echo e($odr->name); ?></td>
               </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

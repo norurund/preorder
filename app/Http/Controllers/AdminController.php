@@ -34,6 +34,9 @@ class AdminController extends Controller
       $columns = [
         '予約者氏名',
         '会',
+        '合計枚数',
+        '大人枚数',
+        '子供枚数',
         'メールアドレス',
         '紹介者氏名',
       ] ;
@@ -46,6 +49,9 @@ class AdminController extends Controller
         $csv = [
           $odr->ordername,
           $odr->kai,
+          $odr->tiketsum,
+          $odr->tiketadl,
+          $odr->tiketcld,
           $odr->address,
           $odr->name,
         ] ;

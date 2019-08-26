@@ -2170,7 +2170,7 @@ class ComposerStaticInit87d0de9b420d1c4a41719fb73756e5ff
         'Opis\\Closure\\SecurityProvider' => __DIR__ . '/..' . '/opis/closure/src/SecurityProvider.php',
         'Opis\\Closure\\SelfReference' => __DIR__ . '/..' . '/opis/closure/src/SelfReference.php',
         'Opis\\Closure\\SerializableClosure' => __DIR__ . '/..' . '/opis/closure/src/SerializableClosure.php',
-        'OrderTableSeeder' => __DIR__ . '/../..' . '/database/seeds/OrderTableSeeder.php',
+        'OrdersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/OrdersTableSeeder.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',

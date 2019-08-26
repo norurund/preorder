@@ -21,6 +21,9 @@ class FolderController extends Controller
     // タイトルに入力値を代入する
     $order->ordername = $request->ordername;
     $order->kai = $request->kai;
+    $order->tiketsum = $request->tiketsum;
+    $order->tiketadl = $request->tiketadl;
+    $order->tiketcld = $request->tiketcld;
     $order->address = $request->address;
     $order->name = $request->name;
     // インスタンスの状態をデータベースに書き込む
